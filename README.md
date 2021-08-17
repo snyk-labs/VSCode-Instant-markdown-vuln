@@ -37,8 +37,9 @@ This same attack vector can be utilised to retrieve most files (including passwo
 
 ## Further reading 
 
+This vulnerability is based on research and the front end code from Kirill89 https://github.com/Kirill89/visual-studio-code-extension-security-vulnerabilities
+
 https://snyk.io/blog/vulnerable-visual-studio-code-extensions-marketplace/
 
 https://snyk.io/blog/visual-studio-code-extension-security-vulnerabilities-deep-dive/
 
-https://github.com/Kirill89/visual-studio-code-extension-security-vulnerabilities
