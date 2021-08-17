@@ -20,7 +20,7 @@ The Ngrok subdomain can also be hidden behind a custom url via a CNAME, for more
 ### The target 
 When i run the target i use a VM with OSX running and install the latest VSCode, although you can just as easily run this in your local env (just be aware of security beyond the demo!).
 
-You'll also need to install the Instant Markdown extension from the VSCode extension marketplace, once installed click the dropdown next to uninstall and select "install another version" and choose 1.4.6. 
+You'll also need to install the Instant Markdown extension from the VSCode extension marketplace, once installed click the dropdown next to uninstall and select "install another version" and choose 1.4.6. Note this is fixed in instant markdown [1.4.7](https://github.com/dbankier/vscode-instant-markdown/commit/a7701721c8ba33f45baec635a38447f63e4520ce)
 
 Create a markdown doc (or open this one) and let it open in a browser, this will start the local webserver so you can see live updates from the markdown.
 
