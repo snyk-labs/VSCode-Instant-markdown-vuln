@@ -28,6 +28,9 @@ In the home directory, via terminal, create a file called passwords and enter so
 Open the link in the browser on the target machine 
 
 ## Further reading 
+
 https://snyk.io/blog/vulnerable-visual-studio-code-extensions-marketplace/
+
 https://snyk.io/blog/visual-studio-code-extension-security-vulnerabilities-deep-dive/
+
 https://github.com/Kirill89/visual-studio-code-extension-security-vulnerabilities
