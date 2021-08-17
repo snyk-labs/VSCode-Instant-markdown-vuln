@@ -1,7 +1,7 @@
 # VSCode Instant markdown vuln demo 
 This repo is to demonstrate the file traversal vulnerability which uses a exploit in the Instant Markdown VSCode extension 
 
-* Disclaimer* This is for demonstration and education purposes only, i take no responsibility for this being used with malicious intent not should this be used for malicious intent. 
+**Disclaimer** This is for demonstration and education purposes only, i take no responsibility for this being used with malicious intent not should this be used for malicious intent. 
 
 ## Requisites 
 - Ngrok installed 
