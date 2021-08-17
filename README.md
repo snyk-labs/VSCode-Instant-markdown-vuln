@@ -4,7 +4,7 @@ This repo is to demonstrate the file traversal vulnerability which uses a exploi
 ## Requisites 
 - Ngrok installed 
 - PHP installed
-- VSCode with Instant Markdown 1.4.6 extension installed 
+- VSCode with Instant Markdown 1.4.6 extension installed (either in a VM or in local, be ye warned with this vuln ext installed locally) 
 
 ## Getting Started 
 Theres 2 main elements to setting this up, The attacker which will use ngrok to serve a locally running website using Ngrok while the target will use VSCode with an extension that has our known exploit. The goal here is to demonstrate how an attacker can use VSCode to do a file traversal to remotely gain a file from the target. 
@@ -29,9 +29,9 @@ In the home directory, via terminal, create a file called passwords and enter so
 ### Executing the attack 
 Open the attacker ngrok link in the browser on the target machine, it will open with the landing page from the attackers index.php (lol you got rick rolled!)
 
-Seemingly it will appear to the target that nothing has happened (beyond getting rick rolled), What happens on the target machine is a bunch of iframes will open in as part of the page and look for that passwords file. 
+Seemingly it will appear to the target that nothing has happened (beyond getting rick rolled), What happens on the target machine is iframes will open in as part of the page and look for that passwords file. 
 
-Once the passwords file has been located using the exploit, it will send it to the track.php on the attackers ngrok and save the contents of the file into the root directory as a date stamped text file.
+Once the passwords file has been located using the exploit, it will send via POST to the track.php on the attackers ngrok and save the contents of the file into the target ngrok root directory as a date stamped text file.
 
 This same attack vector can be utilised to retrieve most files (including password files) on the target machine. 
 
