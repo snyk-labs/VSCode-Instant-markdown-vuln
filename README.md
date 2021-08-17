@@ -13,7 +13,9 @@ Theres 2 main elements to setting this up, The attacker which will use ngrok to 
 - PHP > run the webserver in the root folder containing the scripts above, start the webserver in a terminal session using `php -S localhost:8123`
 - Ngrok > start ngrok pointing to the same port as php, change yourdomain with a custom name and start Ngrok using `ngrok http 8123 -subdomain=yourdomain` 
 
-Once you have your custom subdomain edit index.php and update line 60 using your custom Ngrok subdomain
+Once you have your custom subdomain edit index.php and update line 60 using your custom Ngrok subdomain. 
+
+The Ngrok subdomain can also be hidden behind a custom url via a CNAME, for more info see the [Ngrok docs](https://ngrok.com/docs)
 
 ### The target 
 When i run the target i use a VM with OSX running and install the latest VSCode, although you can just as easily run this in your local env (just be aware of security beyond the demo!).
@@ -25,7 +27,13 @@ Create a markdown doc (or open this one) and let it open in a browser, this will
 In the home directory, via terminal, create a file called passwords and enter some text in there (anything you want). 
 
 ### Executing the attack 
-Open the link in the browser on the target machine 
+Open the attacker ngrok link in the browser on the target machine, it will open with the landing page from the attackers index.php (lol you got rick rolled!)
+
+Seemingly it will appear to the target that nothing has happened (beyond getting rick rolled), What happens on the target machine is a bunch of iframes will open in as part of the page and look for that passwords file. 
+
+Once the passwords file has been located using the exploit, it will send it to the track.php on the attackers ngrok and save the contents of the file into the root directory as a date stamped text file.
+
+This same attack vector can be utilised to retrieve most files (including password files) on the target machine. 
 
 ## Further reading 
 
